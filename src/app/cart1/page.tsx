@@ -31,13 +31,13 @@ export default function Home() {
             <Link href="/">Home</Link>
           </li>
           <li className="cursor-pointer hover:text-[#007580]">
-            <Link href="#">Shop</Link>
+            <Link href="/">Shop</Link>
           </li>
           <li className="cursor-pointer hover:text-[#007580]">
             <Link href="/product">Product</Link>
           </li>
           <li className="cursor-pointer hover:text-[#007580]">
-            <Link href="#">Pages</Link>
+            <Link href="/">Pages</Link>
           </li>
           <li className="cursor-pointer hover:text-[#007580]">
             <Link href="/about">About</Link>

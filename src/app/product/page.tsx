@@ -27,20 +27,20 @@ export default function Product() {
       {/* Navigation Bar with clickable items */}
       <div className="w-full h-[74px] bg-white flex text-[#636270]">
         <ul className="w-full flex justify-start items-center space-x-8 pl-40">
-          <li className="cursor-pointer text-[#007580]">
-            <a href="/">Home</a>
+        <li className="cursor-pointer text-[#007580]">
+            <Link href="/">Home</Link>
           </li>
           <li className="cursor-pointer hover:text-[#007580]">
-            <a href="#">Shop</a>
+            <Link href="/">Shop</Link>
           </li>
           <li className="cursor-pointer hover:text-[#007580]">
-            <a href="/product">Product</a>
+            <Link href="/product">Product</Link>
           </li>
           <li className="cursor-pointer hover:text-[#007580]">
-            <a href="#">Pages</a>
+            <Link href="/">Pages</Link>
           </li>
           <li className="cursor-pointer hover:text-[#007580]">
-            <a href="/about">About</a>
+            <Link href="/about">About</Link>
           </li>
         </ul>
         <div className='w-[168px] h-[15px] flex mt-8 mr-32'>
