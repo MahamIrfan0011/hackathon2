@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Navbar from "../components/Navbar";
-import { FaShoppingCart } from 'react-icons/fa'; // Importing the shopping cart icon
+import { FaShoppingCart } from 'react-icons/fa';
 
 export default function Contact() {
   return (
@@ -9,29 +9,31 @@ export default function Contact() {
       <Navbar />
       
       {/* Top Section with Logo and Cart Button */}
-      <div className="w-full h-[84px] bg-[#F0F2F3] py-[20px] px-[300px] flex justify-between items-center">
+      <div className="w-full h-[84px] bg-[#F0F2F3] py-4 px-5 md:px-[300px] flex justify-between items-center">
         <Image src="/logo-sofa.png" alt="logo" width={166} height={40} />
 
         {/* Cart Button */}
-        <button className="w-[120px] h-[44px] bg-white rounded-md flex items-center justify-center relative ml-auto">
-          <FaShoppingCart className="text-black mr-2" /> {/* Cart Icon */}
-          <p className="text-black mr-4">Cart</p>
-          
-          {/* Badge Circle with Number */}
-          <div className="absolute top-0 right-0 w-6 h-6 mr-2 rounded-full bg-[#007580] text-white text-xs flex items-center justify-center mt-2">
-            2 {/* This is the number you can update */}
-          </div>
-        </button>
+        <Link href="/product1">
+          <button className="w-[120px] h-[44px] bg-white rounded-md flex items-center justify-center relative ml-auto">
+            <FaShoppingCart className="text-black mr-2" />
+            <p className="text-black mr-4">Cart</p>
+            
+            {/* Badge Circle with Number */}
+            <div className="absolute top-0 right-0 w-6 h-6 mr-2 rounded-full bg-[#007580] text-white text-xs flex items-center justify-center mt-2">
+              2
+            </div>
+          </button>
+        </Link>
       </div>
 
       {/* Navigation Bar with clickable items */}
       <div className="w-full h-[74px] bg-white flex text-[#636270]">
-        <ul className="w-full flex justify-start items-center space-x-8 pl-40">
-        <li className="cursor-pointer text-[#007580]">
+        <ul className="w-full flex justify-start items-center space-x-4 md:space-x-8 pl-4 md:pl-40">
+          <li className="cursor-pointer text-[#007580]">
             <Link href="/">Home</Link>
           </li>
           <li className="cursor-pointer hover:text-[#007580]">
-            <Link href="#">Shop</Link>
+            <Link href="/product">Shop</Link>
           </li>
           <li className="cursor-pointer hover:text-[#007580]">
             <Link href="/product">Product</Link>
@@ -43,40 +45,42 @@ export default function Contact() {
             <Link href="/about">About</Link>
           </li>
         </ul>
-        <div className='w-[168px] h-[15px] flex mt-8 mr-32'>
+        <div className='w-[168px] h-[15px] flex mt-2 md:mt-8 mr-4 md:mr-32'>
           <p className='font-normal font-inter text-[14px] text-[#636270]'>
             Contact:
           </p>
-          <Link href ="/contact" className='font-medium text-[14px] font-inter text-[#272343] whitespace-nowrap'>
+          <Link href="/contact" className='font-medium text-[14px] font-inter text-[#272343] whitespace-nowrap'>
             (808) 555-0111
           </Link>
         </div>
-        </div>
-        <div className='w-full h-[1144px] text-center'>
-            <h5 className='font-poppins font-semibold text-[36px] text-black text-center items-center mt-8'>
-                Get In Touch With Us
-            </h5>
-            <p className='font-poppins font-regular text-[16px] text-[#9F9F9F] mt-2'>
-            For More Information About Our Product & Services. Please Feel Free To Drop Us <br />An Email. Our Staff Always Be There To Help You Out. Do Not Hesitate!
-            </p>
-            <Image src="/Group 161.png" alt="picture" width={1058} height={923} className='ml-32'/>
-            <Image src="/Frame 161.png" alt="picture" width={1058} height={270} className='ml-32'/>
-        </div>
-        <div className="flex flex-col h-screen mt-8 ml-16">
+      </div>
+
+      <div className='w-full h-auto text-center p-4 md:p-0'>
+        <h5 className='font-poppins font-semibold text-[24px] md:text-[36px] text-black mt-8'>
+          Get In Touch With Us
+        </h5>
+        <p className='font-poppins font-regular text-[14px] md:text-[16px] text-[#9F9F9F] mt-2'>
+          For More Information About Our Product & Services. Please Feel Free To Drop Us <br />An Email. Our Staff Always Be There To Help You Out. Do Not Hesitate!
+        </p>
+        <Image src="/Group 161.png" alt="picture" width={1058} height={923} className='mx-auto'/>
+        <Image src="/Frame 161.png" alt="picture" width={1058} height={270} className='mx-auto'/>
+      </div>
+
+      <div className="flex flex-col h-auto mt-8 mx-4 md:mx-16">
         {/* Main Content */}
         <div className="flex-grow">
-          <div className="bg-white w-full h-auto flex flex-row items-start justify-center mr-8 mt-[182px]">
+          <div className="bg-white w-full h-auto flex flex-col md:flex-row items-start justify-center mt-[182px]">
             {/* Logo and Paragraph Section */}
-            <div className="w-[350px] mt-16">
+            <div className="w-full md:w-[350px] mt-4 md:mt-16">
               <Image src="/logo-sofa.png" alt="logo" width={128} height={20} />
-              <p className="font-inter font-regular text-[16px] text-[#272343] mt-4 leading-[28px] text-justify">
+              <p className="font-inter font-regular text-[14px] md:text-[16px] text-[#272343] mt-4 leading-[28px] text-justify">
                 Vivamus tristique odio sit amet<br /> velit semper, eu posuere turpis<br />  
               </p>
               <Image src="/Social Links.png" alt="social accounts" width={206} height={38} className='mt-4'/>
             </div>
 
             {/* CATEGORY Section */}
-            <div className="ml-12 mt-16">
+            <div className="mt-4 md:mt-16 md:ml-12">
               <h4 className="font-inter font-medium text-[16px] leading-[18px] tracking-[3px] text-[#9A9CAA] mb-4">
                 CATEGORY
               </h4>
@@ -90,7 +94,7 @@ export default function Contact() {
                 <li className="font-inter font-normal text-[14px] leading-[22px] text-[#272343] hover:text-black cursor-pointer">
                   Wing Chair
                 </li>
-                <li className="font-inter font-normal text-[14px] leading-[22px] text-[#007580] hover:text-black cursor-pointer underline underline-color-[#007580]">
+                <li className="font-inter font-normal text-[14px] leading-[22px] text-[#007580] hover:text-black cursor-pointer underline">
                   Desk Chair
                 </li>
                 <li className="font-inter font-normal text-[14px] leading-[22px] text-[#272343] hover:text-black cursor-pointer">
@@ -103,7 +107,7 @@ export default function Contact() {
             </div>
 
             {/* SUPPORT Section */}
-            <div className="ml-14 mt-16">
+            <div className="mt-4 md:mt-16 md:ml-14">
               <h4 className="font-inter font-medium text-[16px] leading-[18px] tracking-[3px] text-[#9A9CAA] mb-4">
                 SUPPORT
               </h4>
@@ -124,18 +128,18 @@ export default function Contact() {
             </div>
 
             {/* NEWSLETTER Section */}
-            <div className="ml-14 mt-16">
+            <div className="mt-4 md:mt-16 md:ml-14">
               <h4 className="font-inter font-medium text-[14px] text-[#9A9CAA] text-justify">
                 NEWSLETTER
               </h4>
-              <div className="mt-6 flex">
+              <div className="mt-6 flex flex-col md:flex-row">
                 <input 
                   type="email" 
                   id="email" 
                   className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 
                   placeholder="Your email"
                 />
-                <button className="w-[127px] h-[46px] bg-[#029FAE] text-white text-[16px] font-inter font-semibold rounded-md ml-2">
+                <button className="w-full md:w-[127px] h-[46px] bg-[#029FAE] text-white text-[16px] font-inter font-semibold rounded-md mt-2 md:mt-0 md:ml-2">
                   Subscribe
                 </button>
               </div>
@@ -149,12 +153,13 @@ export default function Contact() {
         {/* Footer Section */}
         <footer className="w-full flex items-center justify-center bg-white px-4 mt-auto">
           <div className="flex w-full items-center justify-between">
-            <p className="font-Poppins font-regular text-[14px] leading-[18.9px] text-[rgba(0,0,0,0.6)] whitespace-nowrap pl-16">
+            <p className="font-Poppins font-regular text-[14px] leading-[18.9px] text-[rgba(0,0,0,0.6)] whitespace-nowrap pl-4 md:pl-16">
               @2021-Blogy-Designed & Developed by <span className="font-bold">Zakirsoft</span>
             </p>
             <Image src="/Group 13 (1).png" alt="accounts" width={227} height={27} />
           </div>
         </footer>
       </div>
-        </div>
-  )}
+    </div>
+  );
+}
