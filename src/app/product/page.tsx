@@ -257,22 +257,25 @@ export default function Home() {
                   Subscribe
                 </button>
               </div>
-              <p className="font-inter font-regular text-[15px] text-[#272343] text-justify mt-4">
+              <p className="font-inter text-sm text-[#272343] text-justify mt-2">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit<br />. 
               </p>
             </div>
           </div>
 
           <hr className="pt-24 mt-4 border-gray-300" />
-          <div className="w-full flex items-center justify-center px-4">
-            {/* Footer Content */}
-            <div className="flex w-full items-center justify-between">
-              <p className="font-Poppins font-regular text-[14px] leading-[18.9px] text-[rgba(0,0,0,0.6)] whitespace-nowrap pl-16">
-                @2021-Blogy-Designed & Developed by <span className="font-bold">Zakirsoft</span>
-              </p>
-              <Image src="/Group 13 (1).png" alt="accounts" width={227} height={27} />
-            </div>
-          </div>
+          <footer className="w-full flex items-center justify-center bg-white px-4 mt-auto">
+  <div className="flex w-full items-center justify-between flex-col lg:flex-row mr-6">
+    {/* Text on the first line for mobile, second line for large devices */}
+    <p className="font-Poppins text-sm text-[rgba(0,0,0,0.6)] whitespace-nowrap pl-6 lg:pl-16 mb-4 lg:mb-0 mr-4">
+      @2021-Blogy-Designed & Developed 
+      <span className="block lg:inline font-bold">by Zakirsoft</span> {/* Make Zakirsoft appear on the next line on mobile */}
+    </p>
+    
+    {/* Image on the second line for mobile, same line for large devices */}
+    <Image src="/Group 13 (1).png" alt="accounts" width={227} height={27} />
+  </div>
+</footer>
         </div>
       </div>
     </div>

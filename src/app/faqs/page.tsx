@@ -136,7 +136,7 @@ export default function Home() {
         </div>
       </div>
 
-      <Image src="/FAQ.png" alt="faqs" width={1120} height={731} className='ml-4 md:ml-8 lg:ml-16 mt-16'/>
+      <Image src="/FAQ.png" alt="faqs" width={1120} height={731} className='md:ml-8 lg:ml-16 mt-16'/>
 
       <div className="flex flex-col h-screen -mt-32 ml-4 md:ml-8 lg:ml-16">
         {/* Main Content */}
@@ -184,14 +184,14 @@ export default function Home() {
               <h4 className="font-inter font-medium text-[14px] text-[#9A9CAA] text-justify">
                 NEWSLETTER
               </h4>
-              <div className="mt-6 flex flex-col md:flex-row">
+              <div className="mt-6 flex flex-col md:flex-row w-[100px]">
                 <input 
                   type="email" 
                   id="email" 
                   className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mb-2 md:mb-0 md:mr-2" 
                   placeholder="Your email"
                 />
-                <button className="w-full md:w-[127px] h-[46px] bg-[#029FAE] text-white text-[16px] font-inter font-semibold rounded-md">
+                <button className="w-[100px] h-[40px] md:w-[127px] h-[46px] bg-[#029FAE] text-white text-[16px] font-inter font-semibold rounded-md lg:w-full">
                   Subscribe
                 </button>
               </div>
@@ -204,13 +204,17 @@ export default function Home() {
 
         {/* Footer Section */}
         <footer className="w-full flex items-center justify-center bg-white px-4 mt-auto">
-          <div className="flex w-full items-center justify-between">
-            <p className="font-Poppins font-regular text-[14px] leading-[18.9px] text-[rgba(0,0,0,0.6)] whitespace-nowrap pl-4 md:pl-16">
-              @2021-Blogy-Designed & Developed by <span className="font-bold">Zakirsoft</span>
-            </p>
-            <Image src="/Group 13 (1).png" alt="accounts" width={227} height={27} />
-          </div>
-        </footer>
+  <div className="flex w-full items-center justify-between flex-col lg:flex-row mr-16">
+    {/* Text on the first line for mobile, second line for large devices */}
+    <p className="font-Poppins text-sm text-[rgba(0,0,0,0.6)] whitespace-nowrap pl-6 lg:pl-16 mb-4 lg:mb-0 mr-4">
+      @2021-Blogy-Designed & Developed 
+      <span className="block lg:inline font-bold">by Zakirsoft</span> {/* Make Zakirsoft appear on the next line on mobile */}
+    </p>
+    
+    {/* Image on the second line for mobile, same line for large devices */}
+    <Image src="/Group 13 (1).png" alt="accounts" width={227} height={27} />
+  </div>
+</footer>
       </div>
     </div>
   );
